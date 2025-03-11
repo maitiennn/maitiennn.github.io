@@ -1,112 +1,190 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">Your Name</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h1>Hello, I'm Your Name</h1>
-            <p>A passionate developer who loves building things for the web.</p>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
-    </section>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm a web developer with a passion for creating beautiful and functional websites. I specialize in front-end development and have experience working with modern technologies like HTML, CSS, JavaScript, and React.</p>
-        </div>
-    </section>
+/* Navigation Bar */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Building responsive and user-friendly websites.</p>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Designing intuitive and visually appealing interfaces.</p>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile-Friendly</h3>
-                    <p>Creating websites that work seamlessly on all devices.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1.</p>
-                </div>
-                <div class="project">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>Description of Project 2.</p>
-                </div>
-                <div class="project">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3>Project 3</h3>
-                    <p>Description of Project 3.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, feel free to reach out via email or social media.</p>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://linkedin.com/in/yourusername"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </div>
-    </section>
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Your Name. All rights reserved.</p>
-        </div>
-    </footer>
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
 
-    <!-- Scripts -->
-    <script src="scripts.js"></script>
-</body>
-</html>
+nav .nav-links a:hover {
+    color: #77aaff;
+}
+
+/* Hero Section */
+#hero {
+    background: #0077ff;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#hero .btn {
+    background: #fff;
+    color: #0077ff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#hero .btn:hover {
+    background: #f0f0f0;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill i {
+    font-size: 2rem;
+    color: #0077ff;
+    margin-bottom: 10px;
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-links a {
+    color: #0077ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.contact-links a:hover {
+    color: #0055cc;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
