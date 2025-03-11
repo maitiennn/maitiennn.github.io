@@ -38,6 +38,6 @@ jobs:
           GitHub action.  
         commit-message: "Automated sitemap update."
         author: Tuyen Truong <tuyentruong0973@gmail.com>
-        committer: Sai Sivakumar <tuyentruong0973@gmail.com>
+        committer: Tuyen Truong <tuyentruong0973@gmail.com>
         branch: create-pull-request/sitemap
         delete-branch: true
